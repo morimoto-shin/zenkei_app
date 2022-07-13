@@ -2,6 +2,7 @@ import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
+import mpl_toolkits.mplot3d.axes3d as p3
 
 st.set_page_config(page_title='惑星会合シミュレーター')
 st.markdown("<h1 style='text-align: center; color: black;'>惑星会合シミュレーター</h1>", unsafe_allow_html=True)
