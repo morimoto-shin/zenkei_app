@@ -234,7 +234,7 @@ def main():
         while i <= frames:
             update(i)
             plot.pyplot(fig)
-            i += 1
+            i += 3
         if stop:
             st.stop()
 
