@@ -2,8 +2,6 @@ import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
-import mpl_toolkits.mplot3d.axes3d as p3
-import time
 
 st.set_page_config(page_title='惑星会合シミュレーター')
 st.markdown("<h1 style='text-align: center; color: black;'>惑星会合シミュレーター</h1>", unsafe_allow_html=True)
@@ -239,21 +237,21 @@ def main():
         if stop:
             st.stop()
 
-# r'''
-# # ケプラー方程式による惑星会合周期の計算
-# ## 火星の会合周期
-# 火星と地球を太陽と中心とする円運動をすると仮定する。
-# - 地球の公転周期:$E=365日$
-# - 火星の公転周期:$P=687日$
-# 角速度の差に会合周期Sをかけると、火星に対して地球の進んだ各360°となるから公転周期は以下のように計算できる。
+r'''
+# ケプラー方程式による惑星会合周期の計算
+## 火星の会合周期
+火星と地球を太陽と中心とする円運動をすると仮定する。
+- 地球の公転周期:$E=365日$
+- 火星の公転周期:$P=687日$
+角速度の差に会合周期Sをかけると、火星に対して地球の進んだ各360°となるから公転周期は以下のように計算できる。
 
 
-# $(\frac{360°}{E} - \frac{360°}{P}) * S = 360°$
+$(\frac{360°}{E} - \frac{360°}{P}) * S = 360°$
 
-# $\frac{1}{E}  - \frac{1}{P} = \frac{1}{S}$
+$\frac{1}{E}  - \frac{1}{P} = \frac{1}{S}$
 
-# $S = \frac{EP}{P - E} = \frac{365 * 687}{687 * 365} ≒ 779 ≒ 2年1.7ヶ月 ≒ 約2年2ヶ月$
-# '''
+$S = \frac{EP}{P - E} = \frac{365 * 687}{687 * 365} ≒ 779 ≒ 2年1.7ヶ月 ≒ 約2年2ヶ月$
+'''
 
 
 if __name__ == '__main__':
