@@ -6,6 +6,7 @@ import mpl_toolkits.mplot3d.axes3d as p3
 
 st.set_page_config(page_title='惑星会合シミュレーター')
 st.markdown("<h1 style='text-align: center; color: black;'>惑星会合シミュレーター</h1>", unsafe_allow_html=True)
+st.header('開始:2018年7月31日  終了:2020年10月6日')
 input_elev = st.sidebar.slider("xy軸からの方位角", 0, 180, 45)
 input_azim =  st.sidebar.slider("z軸からの方位軸", 0, 180, 45)
 
@@ -196,7 +197,7 @@ def main():
         # 地球
             u0 = planet.n*(tt-planet.t)
             u1 = u0
-            for nn in range(10):
+            for nn in range(5):
                 u2 = u1-funct(u1,tt,planet.e,planet.n,planet.t)/diff_funct(u1,planet.e)
                 u1 = u2
             xx, yy = ellipse_Kepller(u1, planet.a, planet.e)
